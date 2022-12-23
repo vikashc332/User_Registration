@@ -10,7 +10,7 @@ public class Useregistration {
     public void addUser() {
         int choice = 0;
         do {
-            System.out.println("1. First Name\n2. Last Name\n0. Exit");
+            System.out.println("1. First Name\n2. Last Name\n3. Email\n0. Exit");
             System.out.println("Enter choice");
             choice = scanner.nextInt();
             switch (choice) {
@@ -21,6 +21,10 @@ public class Useregistration {
                 case 2:
                     String lastName = stringInput("Enter Last Name");
                     addLastName(lastName);
+                    break;
+                case 3:
+                    String email = stringInput("Enter email");
+                    addEmail(email);
                     break;
             }
         } while (choice != 0);
@@ -49,6 +53,16 @@ public class Useregistration {
             return true;
         } else {
             System.out.println("Please check Last Name");
+            return false;
+        }
+    }
+    public boolean addEmail(String email) {
+        boolean isMailId = Pattern.matches(UserDetailsRegexPattern.EMAIL, email);
+        if (isMailId) {
+            userDetails.setEmail(email);
+            return true;
+        } else {
+            System.out.println("Please check email id");
             return false;
         }
     }
