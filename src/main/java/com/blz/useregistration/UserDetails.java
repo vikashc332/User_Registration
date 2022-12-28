@@ -19,6 +19,7 @@ public class UserDetails {
     }
 
     public void setLastName(String lastName) {
+
         this.lastName = lastName;
     }
     public String getEmail() {
@@ -26,6 +27,7 @@ public class UserDetails {
     }
 
     public void setEmail(String email) {
+
         this.email = email;
     }
     public String getPhoneNumber() {
@@ -33,6 +35,7 @@ public class UserDetails {
     }
 
     public void setPhoneNumber(String phoneNumber) {
+
         this.phoneNumber = phoneNumber;
     }
     public String getPassword() {
